@@ -2,7 +2,8 @@
 import UIKit
 
 /// Responsible for parsing GIF data and decoding the individual frames.
-public class Animator {
+@objc
+public class Animator: NSObject {
 
   /// Total duration of one animation loop
   var loopDuration: TimeInterval {
@@ -22,7 +23,7 @@ public class Animator {
   private var displayLinkInitialized: Bool = false
 
   /// A delegate responsible for displaying the GIF frames.
-  private weak var delegate: GIFAnimatable!
+  private weak var delegate: GIFAnimatableView!
     
   private var animationBlock: (() -> Void)? = nil
 
@@ -49,7 +50,8 @@ public class Animator {
   /// - parameter view: A view object that implements the `GIFAnimatable` protocol.
   ///
   /// - returns: A new animator instance.
-  public init(withDelegate delegate: GIFAnimatable) {
+  @objc
+  public init(withDelegate delegate: GIFAnimatableView) {
     self.delegate = delegate
   }
 

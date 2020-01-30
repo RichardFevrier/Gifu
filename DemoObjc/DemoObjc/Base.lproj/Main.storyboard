@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x1V-Do-fcS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Gifu-->
+        <scene sceneID="SYH-Ij-1qc">
+            <objects>
+                <viewController title="Gifu" id="x1V-Do-fcS" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gOJ-Ay-Eh4"/>
+                        <viewControllerLayoutGuide type="bottom" id="IXQ-K2-vcs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v3s-yV-GdW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Tap the image to pause/resume. Swipe to change GIF." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkF-n9-2gI">
+                                <rect key="frame" x="114.5" y="149" width="185" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="xHw-lH-6hb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.95686274510000002" green="0.96470588239999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="300" translatesAutoresizingMaskIntoConstraints="NO" id="nFL-kn-EhL" customClass="GIFImageView" customModule="Gifu">
+                                <rect key="frame" x="0.0" y="228" width="414" height="331"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nFL-kn-EhL" secondAttribute="height" multiplier="5:4" id="FAj-sz-kCZ"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="zFi-mb-RhL" appends="YES" id="x24-EI-2ZI"/>
+                                    <outletCollection property="gestureRecognizers" destination="GZ1-fY-0LD" appends="YES" id="d09-DC-2O0"/>
+                                    <outletCollection property="gestureRecognizers" destination="DEH-MX-MYn" appends="YES" id="rOM-zE-3u0"/>
+                                    <outletCollection property="gestureRecognizers" destination="AK2-VW-NxE" appends="YES" id="0jD-E6-KCa"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Gifu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8q-Mp-1vA">
+                                <rect key="frame" x="190" y="124" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.99144423010000005" green="0.56549066309999996" blue="0.033751130099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNv-de-sWC">
+                                <rect key="frame" x="0.0" y="569" width="414" height="18"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="tintColor" red="0.99144423010000005" green="0.56549066309999996" blue="0.033751130099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IXQ-K2-vcs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="rNv-de-sWC" secondAttribute="bottom" constant="12" id="8P4-7A-ReN"/>
+                            <constraint firstAttribute="centerX" secondItem="nFL-kn-EhL" secondAttribute="centerX" id="E28-9r-F5r"/>
+                            <constraint firstItem="rNv-de-sWC" firstAttribute="top" secondItem="nFL-kn-EhL" secondAttribute="bottom" constant="10" id="EDx-68-4K4"/>
+                            <constraint firstItem="nFL-kn-EhL" firstAttribute="leading" secondItem="v3s-yV-GdW" secondAttribute="leading" id="H4U-6V-BIP"/>
+                            <constraint firstAttribute="centerX" secondItem="mkF-n9-2gI" secondAttribute="centerX" id="Khm-8W-AR3"/>
+                            <constraint firstAttribute="trailing" secondItem="nFL-kn-EhL" secondAttribute="trailing" id="VfW-b8-hiW"/>
+                            <constraint firstItem="nFL-kn-EhL" firstAttribute="top" secondItem="mkF-n9-2gI" secondAttribute="bottom" constant="50" id="aBz-cb-ND4"/>
+                            <constraint firstAttribute="centerX" secondItem="E8q-Mp-1vA" secondAttribute="centerX" id="c0o-is-wN6"/>
+                            <constraint firstItem="rNv-de-sWC" firstAttribute="centerX" secondItem="nFL-kn-EhL" secondAttribute="centerX" id="cwC-Mo-SsF"/>
+                            <constraint firstItem="rNv-de-sWC" firstAttribute="width" secondItem="nFL-kn-EhL" secondAttribute="width" id="gsy-c6-wIQ"/>
+                            <constraint firstItem="mkF-n9-2gI" firstAttribute="top" secondItem="E8q-Mp-1vA" secondAttribute="bottom" constant="4" id="m1h-dG-jhU"/>
+                            <constraint firstItem="E8q-Mp-1vA" firstAttribute="top" secondItem="gOJ-Ay-Eh4" secondAttribute="bottom" constant="80" id="ycP-5d-cN1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4Vl-kJ-fs0"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imageDataLabel" destination="rNv-de-sWC" id="EIh-xj-Auu"/>
+                        <outlet property="imageView" destination="nFL-kn-EhL" id="rLT-BP-N4y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9vF-Zq-ewf" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="zFi-mb-RhL">
+                    <connections>
+                        <action selector="toggleAnimation:" destination="x1V-Do-fcS" id="J1h-el-pR6"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="GZ1-fY-0LD">
+                    <connections>
+                        <action selector="swapImage:" destination="x1V-Do-fcS" id="PjS-Zt-9wU"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="DEH-MX-MYn">
+                    <connections>
+                        <action selector="swapImage:" destination="x1V-Do-fcS" id="kgm-gb-Qi0"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" numberOfTouchesRequired="2" id="AK2-VW-NxE">
+                    <connections>
+                        <segue destination="Scx-3x-bqu" kind="presentation" id="0tY-co-S4e"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="878" y="369"/>
+        </scene>
+        <!--Gifu-->
+        <scene sceneID="TOW-3z-5Ij">
+            <objects>
+                <viewController title="Gifu" id="Scx-3x-bqu" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pHa-gX-oHs"/>
+                        <viewControllerLayoutGuide type="bottom" id="EDp-7X-67A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oT1-Is-ntt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="300" translatesAutoresizingMaskIntoConstraints="NO" id="RcN-xY-Vvc" customClass="GIFImageView" customModule="Gifu">
+                                <rect key="frame" x="0.0" y="146" width="414" height="331"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RcN-xY-Vvc" secondAttribute="height" multiplier="5:4" id="b90-a4-chk"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="i94-tj-Mjm" appends="YES" id="ywe-ba-3QF"/>
+                                    <outletCollection property="gestureRecognizers" destination="wt6-gd-ikN" appends="YES" id="bSC-T1-gQz"/>
+                                    <outletCollection property="gestureRecognizers" destination="GEL-Yn-iUL" appends="YES" id="a8t-9Y-UdE"/>
+                                    <outletCollection property="gestureRecognizers" destination="sNl-vN-gSl" appends="YES" id="zFw-Ac-GKi"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="tintColor" red="0.99144423010000005" green="0.56549066309999996" blue="0.033751130099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="RcN-xY-Vvc" secondAttribute="centerX" id="2mT-dv-jTP"/>
+                            <constraint firstAttribute="trailing" secondItem="RcN-xY-Vvc" secondAttribute="trailing" id="baY-wB-ti2"/>
+                            <constraint firstItem="RcN-xY-Vvc" firstAttribute="top" secondItem="pHa-gX-oHs" secondAttribute="bottom" constant="146" id="g6e-gq-CZG"/>
+                            <constraint firstItem="RcN-xY-Vvc" firstAttribute="leading" secondItem="oT1-Is-ntt" secondAttribute="leading" id="hng-kW-Zd0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KX0-ew-26b"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="RcN-xY-Vvc" id="rcg-uW-ch9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ojP-n7-H0E" sceneMemberID="firstResponder"/>
+                <exit id="NU3-7l-cdI" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="i94-tj-Mjm">
+                    <connections>
+                        <action selector="toggleAnimation:" destination="Scx-3x-bqu" id="B7m-TN-avH"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="wt6-gd-ikN">
+                    <connections>
+                        <action selector="swapImage:" destination="Scx-3x-bqu" id="Zma-Lb-1NE"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="GEL-Yn-iUL">
+                    <connections>
+                        <action selector="swapImage:" destination="Scx-3x-bqu" id="sB4-k7-SG8"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" numberOfTouchesRequired="2" id="sNl-vN-gSl">
+                    <connections>
+                        <segue destination="NU3-7l-cdI" kind="unwind" unwindAction="unwindToRootViewControllerWithSegue:" id="4Ot-Qo-L4q"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1626" y="368"/>
+        </scene>
+    </scenes>
+</document>

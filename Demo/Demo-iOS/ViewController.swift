@@ -4,7 +4,6 @@ import Gifu
 class ViewController: UIViewController {
   @IBOutlet weak var imageView: GIFImageView!
   @IBOutlet weak var imageDataLabel: UILabel!
-  @IBAction func unwindToRootViewController(segue: UIStoryboardSegue) { }
 
   var currentGIFName: String = "mugen" {
     didSet {
@@ -15,11 +14,10 @@ class ViewController: UIViewController {
   @IBAction func toggleAnimation(_ sender: AnyObject) {
     if imageView.isAnimatingGIF {
       imageView.stopAnimatingGIF()
-      print(imageView.gifLoopDuration)
     } else {
       imageView.startAnimatingGIF()
-      print(imageView.gifLoopDuration)
     }
+    print(imageView.gifLoopDuration)
   }
 
   @IBAction func swapImage(_ sender: AnyObject) {

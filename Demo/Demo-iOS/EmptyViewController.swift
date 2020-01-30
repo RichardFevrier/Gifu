@@ -2,7 +2,11 @@ import UIKit
 import Gifu
 
 class EmptyViewController: UIViewController {
-  let imageView = GIFImageView(image: #imageLiteral(resourceName: "mugen.gif"))
+  lazy var imageView: GIFImageView = {
+    let view = GIFImageView()
+    view.image = #imageLiteral(resourceName: "mugen.gif")
+    return view
+  }()
 
   lazy var customImageView: CustomAnimatedView = {
     return CustomAnimatedView(frame: CGRect(x: 0, y: self.view.frame.height - 200, width: 360, height: 200))
@@ -20,10 +24,18 @@ class EmptyViewController: UIViewController {
   }
 }
 
-class CustomAnimatedView: UIView, GIFAnimatable {
-  public lazy var animator: Animator? = {
-    return Animator(withDelegate: self)
-  }()
+class CustomAnimatedView: GIFAnimatableView {
+  private var _animator: Animator?
+
+  override public var animator: Animator? {
+    get {
+      if (_animator == nil) {
+        _animator = Animator(withDelegate: self)
+      }
+      return _animator
+    }
+    set {}
+  }
 
   override public func display(_ layer: CALayer) {
     updateImageIfNeeded()

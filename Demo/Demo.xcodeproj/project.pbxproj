@@ -16,9 +16,9 @@
 		0007E193238193E1000FED9F /* Gifu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0007E192238193E1000FED9F /* Gifu.framework */; };
 		0007E194238193E1000FED9F /* Gifu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0007E192238193E1000FED9F /* Gifu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0007E1962381978A000FED9F /* mugen.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0007E1952381978A000FED9F /* mugen.gif */; };
-		002A1BFC1D1624D0005ABBD0 /* mugen.gif in Resources */ = {isa = PBXBuildFile; fileRef = 002A1BFB1D1624D0005ABBD0 /* mugen.gif */; };
 		0032FE841FFA693500444203 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0032FE831FFA693500444203 /* LaunchScreen.storyboard */; };
 		00DD26EB1DA5968500A0F683 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD26EA1DA5968500A0F683 /* EmptyViewController.swift */; };
+		799ACB3E23E30B1500355BBF /* mugen.gif in Resources */ = {isa = PBXBuildFile; fileRef = 799ACB3D23E30B1500355BBF /* mugen.gif */; };
 		9D98823D19BC69CA00B790C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D98823C19BC69CA00B790C6 /* AppDelegate.swift */; };
 		9D98823F19BC69CA00B790C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D98823E19BC69CA00B790C6 /* ViewController.swift */; };
 		9D98824419BC69CA00B790C6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D98824319BC69CA00B790C6 /* Images.xcassets */; };
@@ -50,10 +50,10 @@
 		0007E18E2380A6DE000FED9F /* Gifu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Gifu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0007E192238193E1000FED9F /* Gifu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Gifu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0007E1952381978A000FED9F /* mugen.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = mugen.gif; path = ../../../GifuTests/Images/mugen.gif; sourceTree = "<group>"; };
-		002A1BFB1D1624D0005ABBD0 /* mugen.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = mugen.gif; path = ../../../GifuTests/Images/mugen.gif; sourceTree = "<group>"; };
 		0032FE831FFA693500444203 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00B2B8171E1DAB1C00A50D91 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		00DD26EA1DA5968500A0F683 /* EmptyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		799ACB3D23E30B1500355BBF /* mugen.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = mugen.gif; path = ../../Tests/Images/mugen.gif; sourceTree = "<group>"; };
 		9D98823719BC69CA00B790C6 /* Gifu-iOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gifu-iOSDemo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D98823C19BC69CA00B790C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D98823E19BC69CA00B790C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +112,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		799ACB3C23E30B0600355BBF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				799ACB3D23E30B1500355BBF /* mugen.gif */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		9D98822E19BC69CA00B790C6 = {
 			isa = PBXGroup;
 			children = (
@@ -134,7 +142,7 @@
 		9D98823919BC69CA00B790C6 /* Demo-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9D98823A19BC69CA00B790C6 /* Supporting Files */,
+				799ACB3C23E30B0600355BBF /* Supporting Files */,
 				9D98823C19BC69CA00B790C6 /* AppDelegate.swift */,
 				9D98824319BC69CA00B790C6 /* Images.xcassets */,
 				9D98825919BC69F600B790C6 /* Main.storyboard */,
@@ -144,14 +152,6 @@
 				00B2B8171E1DAB1C00A50D91 /* UIImageViewExtension.swift */,
 			);
 			path = "Demo-iOS";
-			sourceTree = "<group>";
-		};
-		9D98823A19BC69CA00B790C6 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				002A1BFB1D1624D0005ABBD0 /* mugen.gif */,
-			);
-			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,7 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D98824419BC69CA00B790C6 /* Images.xcassets in Resources */,
-				002A1BFC1D1624D0005ABBD0 /* mugen.gif in Resources */,
+				799ACB3E23E30B1500355BBF /* mugen.gif in Resources */,
 				0032FE841FFA693500444203 /* LaunchScreen.storyboard in Resources */,
 				9D98825A19BC69F600B790C6 /* Main.storyboard in Resources */,
 			);

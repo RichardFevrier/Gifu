@@ -17,21 +17,21 @@
                BlueprintIdentifier = "00B8C73D1A364DA400C188E7"
                BuildableName = "Gifu.framework"
                BlueprintName = "Gifu"
-               ReferencedContainer = "container:Gifu.xcodeproj">
+               ReferencedContainer = "container:../Gifu.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "009BD1351BBC7F6500FC982B"
-               BuildableName = "GifuTests.xctest"
-               BlueprintName = "GifuTests"
-               ReferencedContainer = "container:Gifu.xcodeproj">
+               BlueprintIdentifier = "79DFF37B23E1EE5600C1BEFD"
+               BuildableName = "Gifu-iOSDemoObjc.app"
+               BlueprintName = "DemoObjc"
+               ReferencedContainer = "container:DemoObjc.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -41,26 +41,7 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "00B8C73D1A364DA400C188E7"
-            BuildableName = "Gifu.framework"
-            BlueprintName = "Gifu"
-            ReferencedContainer = "container:Gifu.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "009BD1351BBC7F6500FC982B"
-               BuildableName = "GifuTests.xctest"
-               BlueprintName = "GifuTests"
-               ReferencedContainer = "container:Gifu.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -73,15 +54,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "00B8C73D1A364DA400C188E7"
-            BuildableName = "Gifu.framework"
-            BlueprintName = "Gifu"
-            ReferencedContainer = "container:Gifu.xcodeproj">
+            BlueprintIdentifier = "79DFF37B23E1EE5600C1BEFD"
+            BuildableName = "Gifu-iOSDemoObjc.app"
+            BlueprintName = "DemoObjc"
+            ReferencedContainer = "container:DemoObjc.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -89,15 +71,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "00B8C73D1A364DA400C188E7"
-            BuildableName = "Gifu.framework"
-            BlueprintName = "Gifu"
-            ReferencedContainer = "container:Gifu.xcodeproj">
+            BlueprintIdentifier = "79DFF37B23E1EE5600C1BEFD"
+            BuildableName = "Gifu-iOSDemoObjc.app"
+            BlueprintName = "DemoObjc"
+            ReferencedContainer = "container:DemoObjc.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
